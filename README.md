@@ -54,10 +54,10 @@
 
 ```bash
 # 使用 HTTPS
-git clone https://github.com/your-username/wangai-studio.git
+git clone https://github.com/flashsi007/wangAIStudio.git
 
 # 或使用 SSH
-git clone git@github.com:your-username/wangai-studio.git
+git@github.com:flashsi007/wangAIStudio.git
 
 # 进入项目目录
 cd wangai-studio
