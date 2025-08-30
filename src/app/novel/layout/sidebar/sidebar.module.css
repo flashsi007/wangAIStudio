@@ -1,0 +1,11 @@
+
+.sidebar{ 
+    width: 2.9rem;
+    transition: width 0.3s ease-in-out;
+   /* opacity: 1;  */
+}
+
+.sidebarAnimated {
+    transition: width 0.3s ease-in-out;
+    
+}

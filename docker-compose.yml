@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  wangai-studio:
+    build: .
+    image: wangai-studio # 镜像名
+    container_name: wangai-studio # 容器名
+    ports:
+      - "3001:3001"
+    env_file:
+      - .env.production # 引入项目生产环境变量
+    restart: unless-stopped

@@ -1,0 +1,24 @@
+/* minmap.module.css */
+.header {
+  display: flex;
+  width: 100%; 
+}
+
+.left,
+.right {
+  flex: 0 0 300px;     
+}
+
+.main {
+  flex: 1 1 auto;      
+  order: 1;            
+  min-width: 0;      
+}
+
+.left {
+  order: 0;  
+}
+
+.right {
+  order: 2; 
+}

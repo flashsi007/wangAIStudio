@@ -1,0 +1,68 @@
+/* AIInput 组件样式 */
+.AIInput {
+    /* 确保光标可见 */
+    caret-color: #3b82f6;
+}
+
+/* 聚焦时的边框颜色 */
+/* .AIInput:focus {
+   
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+} */
+
+/* 选中文本的样式 */
+/* .AIInput::selection {
+    background-color: #3b82f6;
+    color: white;
+} */
+
+/* .AIInput *::selection {
+    background-color: #3b82f6;
+    color: white;
+} */
+
+/* Tab 标签样式 */
+.ai-tag {
+    display: inline-block;
+    background-color: #e5e7eb;
+    color: #374151;
+    max-width: 12rem;
+    padding: 8px 8px;
+    margin: 0 0.2rem;
+    border-radius: 4px !important;
+    font-size: 0.8rem !important;
+    line-height: 0.4 !important;
+    cursor: pointer !important;
+    user-select: none !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    vertical-align: baseline !important;
+
+}
+
+.ai-tag:hover {
+    background-color: #d1d5db;
+}
+
+.ai-tag.selected {
+    background-color: #3b82f6;
+    color: white;
+}
+
+/* 确保内容可以换行 */
+.AIInput {
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+/* 隐藏滚动条但保持滚动功能 */
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}

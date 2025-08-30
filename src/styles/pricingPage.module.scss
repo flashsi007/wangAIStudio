@@ -1,0 +1,845 @@
+// 引用 atomic.scss 中的变量
+@import './atomic.scss';
+
+// 主容器样式
+.page {
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, var(--background), rgba(var(--muted), 0.3), var(--background));
+}
+
+.scrollArea {
+  height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: $spacing-4 $spacing-12;
+}
+
+// Header Section 样式
+.headerSection {
+  text-align: center;
+  margin-bottom: $spacing-16;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-2;
+  background: rgba(var(--primary), $opacity-10);
+  padding: $spacing-2 $spacing-4;
+  border-radius: $radius-full;
+  font-size: $text-sm;
+  font-weight: $font-medium;
+  margin-bottom: $spacing-6;
+}
+
+.badgeIcon {
+  width: $spacing-4;
+  height: $spacing-4;
+  color: var(--primary);
+}
+
+.badgeText { 
+  color: #615c5c;
+  font-weight: $font-semibold;
+}
+
+.mainTitle {
+  font-size: $text-4xl;
+  font-weight: $font-bold;
+  margin-bottom: $spacing-6;
+  background: linear-gradient(to right, #171717,#3a3a3a, rgba(#494848, 0.6));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  
+  @media (min-width: 768px) {
+    font-size: $text-5xl;
+  }
+}
+
+.subtitle {
+  font-size: $text-xl;
+  margin-bottom: $spacing-8;
+  max-width: $spacing-96;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.subtitleText {
+  background: linear-gradient(to right, var(--foreground), var(--muted-foreground));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+// Features Grid 样式
+.featuresGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-4;
+  margin-bottom: $spacing-12;
+  border-radius: $spacing-2;
+  background-color: #FFF;
+  box-shadow: #3a3a3a;
+  
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: $spacing-3;
+  padding: $spacing-4;
+  background: var(--card);
+  border-radius: $radius-lg;
+  border: 1px solid var(--border);
+}
+
+.featureIcon {
+  color: var(--primary);
+}
+
+.featureText {
+  font-size: $text-sm;
+  font-weight: $font-medium;
+  background:linear-gradient(to right, #171717,#3a3a3a, rgba(#494848, 0.8));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+// Pricing Cards 样式
+.pricingGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-8;
+  margin-bottom: $spacing-16;
+  
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.pricingCard {
+  position: relative;
+  transition: all 300ms ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+  &:hover {
+    box-shadow: $shadow-2xl;
+    transform: scale(1.05);
+  }
+}
+
+.pricingCardPopular {
+  border-color: var(--primary);
+  box-shadow: $shadow-lg;
+  box-shadow: 0 0 0 2px rgba(var(--primary), $opacity-20);
+} 
+.pricingCardSupreme {
+  background: linear-gradient(to bottom right, rgba( #171717, $opacity-5), rgba(#171717, $opacity-10));
+}
+
+.cardBadge {
+  position: absolute;
+  top: -$spacing-3;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cardBadgeSupreme {
+  background: linear-gradient(to right, #f97316, #ef4444);
+}
+
+.cardBadgeDefault {
+  background: var(--primary);
+}
+
+.cardHeader {
+  text-align: center;
+  padding-bottom: $spacing-4;
+}
+
+.cardIcon {
+  width: $spacing-16;
+  height: $spacing-16;
+  margin: 0 auto $spacing-4;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardIconPopular {
+  background: rgba(var(--primary), $opacity-10);
+  color: var(--primary);
+}
+
+.cardIconDefault {
+  background: var(--muted);
+  color: var(--muted-foreground);
+}
+
+.cardIconInner {
+  width: $spacing-8;
+  height: $spacing-8;
+  color: var(--primary);
+}
+
+.cardTitle {
+  font-size: $text-2xl;
+  font-weight: $font-bold;
+}
+
+.cardTitleText {
+  background: linear-gradient(to right, #171717,#3a3a3a, rgba(#494848, 0.6));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.cardDescription {
+  color:"#494848";
+  font-size: $text-base;
+}
+
+.cardDescriptionText {
+  background:linear-gradient(to right, #171717,#3a3a3a, rgba(#494848, 0.8));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.cardContent {
+  text-align: center;
+  padding-bottom: $spacing-6;
+}
+
+.priceSection {
+  margin-bottom: $spacing-6;
+}
+
+.originalPrice {
+  font-size: $text-sm;
+  color: var(--muted-foreground);
+  margin-bottom: $spacing-2;
+}
+
+.originalPriceText {
+  text-decoration: line-through;
+}
+
+.savingsBadge {
+  margin-left: $spacing-2;
+  color: #fef3c7;
+}
+
+.currentPrice {
+  font-size: $text-4xl;
+  font-weight: $font-bold;
+  margin-bottom: $spacing-2;
+}
+
+.currentPriceText {
+  background: linear-gradient(to right, #171717,#3a3a3a, rgba(#494848, 0.7));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.wordCount {
+  font-size: $text-lg;
+  font-weight: $font-semibold;
+  margin-bottom: $spacing-1;
+}
+
+.wordCountText {
+  background: linear-gradient(to right, #171717,#3a3a3a, rgba(#494848, 0.8));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.wordCountLabel {
+  font-size: $text-sm;
+  color: var(--muted-foreground);
+}
+
+.separator {
+  margin: $spacing-6 0;
+}
+
+.featuresList {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-3;
+  text-align: left;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: $spacing-3;
+}
+
+.featureCheck {
+  width: $spacing-5;
+  height: $spacing-5;
+  color: #10b981;
+  flex-shrink: 0;
+}
+
+.featureItemText {
+  font-size: $text-sm;
+}
+
+.cardFooter {
+   
+  padding: $spacing-4;
+}
+
+.cardButton {
+     border-radius: $spacing-3;
+  width: 100%;
+}
+
+.cardButtonPopular {
+  background: var(--primary);
+  
+  &:hover {
+    background: rgba(var(--primary), $opacity-90);
+  }
+}
+
+.cardButtonSupreme {
+  background: linear-gradient(to right, #f97316, #ef4444);
+  
+  &:hover {
+    background: linear-gradient(to right, #ea580c, #dc2626);
+  }
+}
+
+// Bottom CTA Section 样式
+.ctaSection {
+  text-align: center;
+  background: 1px solid #171717;
+  border-radius: $radius-2xl;
+  padding: $spacing-8;
+  border: 1px solid #3a3a3a;
+}
+
+.ctaTitle {
+    color: #171717;
+  font-size: $text-2xl;
+  font-weight: $font-bold;
+  margin-bottom: $spacing-4;
+}
+
+.ctaTitleText {
+  background: linear-gradient(to right, #171717,#3a3a3a, rgba(#494848, 0.7));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.ctaDescription {
+    
+  margin-bottom: $spacing-6;
+  max-width: $spacing-80;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ctaDescriptionText {
+  background: linear-gradient(to right, #171717,#3a3a3a, rgba(#494848, 0.9));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.ctaButtons {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-4;
+  justify-content: center;
+  
+  @media (min-width: 640px) {
+    flex-direction: row;
+  }
+}
+
+.ctaButton {
+  font-size: $text-lg;
+  padding: $spacing-3 $spacing-8;
+}
+
+.ctaButtonIcon {
+  width: $spacing-5;
+  height: $spacing-5;
+  margin-right: $spacing-2;
+}
+
+// 工具类样式
+.textSm {
+  font-size: $text-sm;
+}
+
+.textBase {
+  font-size: $text-base;
+}
+
+.textLg {
+  font-size: $text-lg;
+}
+
+.textXl {
+  font-size: $text-xl;
+}
+
+.text2xl {
+  font-size: $text-2xl;
+}
+
+.text4xl {
+  font-size: $text-4xl;
+}
+
+.fontMedium {
+  font-weight: $font-medium;
+}
+
+.fontSemibold {
+  font-weight: $font-semibold;
+}
+
+.fontBold {
+  font-weight: $font-bold;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.textLeft {
+  text-align: left;
+}
+
+.mb1 {
+  margin-bottom: $spacing-1;
+}
+
+.mb2 {
+  margin-bottom: $spacing-2;
+}
+
+.mb4 {
+  margin-bottom: $spacing-4;
+}
+
+.mb6 {
+  margin-bottom: $spacing-6;
+}
+
+.mb8 {
+  margin-bottom: $spacing-8;
+}
+
+.mb12 {
+  margin-bottom: $spacing-12;
+}
+
+.mb16 {
+  margin-bottom: $spacing-16;
+}
+
+.ml2 {
+  margin-left: $spacing-2;
+}
+
+.mr2 {
+  margin-right: $spacing-2;
+}
+
+.p4 {
+  padding: $spacing-4;
+}
+
+.p8 {
+  padding: $spacing-8;
+}
+
+.px4 {
+  padding-left: $spacing-4;
+  padding-right: $spacing-4;
+}
+
+.px8 {
+  padding-left: $spacing-8;
+  padding-right: $spacing-8;
+}
+
+.py2 {
+  padding-top: $spacing-2;
+  padding-bottom: $spacing-2;
+}
+
+.py12 {
+  padding-top: $spacing-12;
+  padding-bottom: $spacing-12;
+}
+
+.pb4 {
+  padding-bottom: $spacing-4;
+}
+
+.pb6 {
+  padding-bottom: $spacing-6;
+}
+
+.gap2 {
+  gap: $spacing-2;
+}
+
+.gap3 {
+  gap: $spacing-3;
+}
+
+.gap4 {
+  gap: $spacing-4;
+}
+
+.gap8 {
+  gap: $spacing-8;
+}
+
+.w4 {
+  width: $spacing-4;
+}
+
+.w5 {
+  width: $spacing-5;
+}
+
+.w8 {
+  width: $spacing-8;
+}
+
+.w16 {
+  width: $spacing-16;
+}
+
+.wFull {
+  width: 100%;
+}
+
+.h4 { 
+  height: $spacing-4;
+}
+
+.h5 {
+  height: $spacing-5;
+}
+
+.h8 {
+  height: $spacing-8;
+}
+
+.h16 {
+  height: $spacing-16;
+}
+
+.h100vh {
+  height: 100vh;
+}
+
+.minHScreen {
+  min-height: 100vh;
+}
+
+.maxW2xl {
+  max-width: $spacing-80;
+}
+
+.maxW3xl {
+  max-width: $spacing-96;
+}
+
+.mxAuto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flexShrink0 {
+  flex-shrink: 0;
+}
+
+.roundedFull {
+  border-radius: $radius-full;
+}
+
+.roundedLg {
+  border-radius: $radius-lg;
+}
+
+.rounded2xl {
+  border-radius: $radius-2xl;
+}
+
+.lineThrough {
+  text-decoration: line-through;
+}
+
+.spaceY3 > * + * {
+  margin-top: $spacing-3;
+}
+
+.my6 {
+  margin-top: $spacing-6;
+  margin-bottom: $spacing-6;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.top3Neg {
+  top: -$spacing-3;
+}
+
+.left50 {
+  left: 50%;
+}
+
+.transform {
+  transform: translateX(-50%);
+}
+
+.translateXNeg50 {
+  transform: translateX(-50%);
+}
+
+.transitionAll {
+  transition: all 0.3s ease;
+}
+
+.duration300 {
+  transition-duration: 0.3s;
+}
+
+.hoverShadowXl:hover {
+  box-shadow: $shadow-2xl;
+}
+
+.hoverScale105:hover {
+  transform: scale(1.05);
+}
+
+.flex {
+  display: flex;
+}
+
+.inlineFlex {
+  display: inline-flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.flexCol {
+  flex-direction: column;
+}
+
+.itemsCenter {
+  align-items: center;
+}
+
+.justifyCenter {
+  justify-content: center;
+}
+
+.justifyBetween {
+  justify-content: space-between;
+}
+
+.gridCols1 {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 640px) {
+  .smFlexRow {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 768px) {
+  .mdGridCols2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .mdText5xl {
+    font-size: $text-5xl;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lgGridCols3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .lgGridCols4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+// 颜色相关样式
+.textPrimary {
+  color: var(--primary);
+}
+
+.textMutedForeground {
+  color: var(--muted-foreground);
+}
+
+.textGreen500 {
+  color: #10b981;
+}
+
+.textAmber100 {
+  color: #fef3c7;
+}
+
+.bgCard {
+  background: var(--card);
+}
+
+.bgMuted {
+  background: var(--muted);
+}
+
+.bgPrimary {
+  background: var(--primary);
+}
+
+.bgPrimary10 {
+  background: rgba(var(--primary), $opacity-10);
+}
+
+.bgGradientToBr {
+  background: linear-gradient(to bottom right, var(--background), rgba(var(--muted), 0.3), var(--background));
+}
+
+.bgGradientToR {
+  background: linear-gradient(to right, var(--primary), rgba(var(--primary), 0.7));
+}
+
+.bgGradientToRPrimary60 {
+  background: linear-gradient(to right, #171717,#3a3a3a, rgba(#494848, 0.6));
+}
+
+.bgGradientToRForeground {
+  background: linear-gradient(to right, var(--foreground), var(--muted-foreground));
+}
+
+.bgGradientToRForeground80 {
+  background: linear-gradient(to right, var(--foreground), rgba(var(--foreground), 0.8));
+}
+
+.bgGradientToRForeground70 {
+  background: linear-gradient(to right, var(--foreground), rgba(var(--foreground), 0.7));
+}
+
+.bgGradientToRMutedForeground {
+  background: linear-gradient(to right, var(--muted-foreground), rgba(var(--muted-foreground), 0.8));
+}
+
+.bgGradientToRPrimary70 {
+  background: linear-gradient(to right, var(--primary), rgba(var(--primary), 0.7));
+}
+
+.bgGradientToROrange500Red500 {
+  background: linear-gradient(to right, #f97316, #ef4444);
+}
+
+.bgGradientToBrPrimary5Primary10 {
+  background: linear-gradient(to bottom right, rgba(var(--primary), $opacity-5), rgba(var(--primary), $opacity-10));
+}
+
+.bgClipText {
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.textTransparent {
+  color: transparent;
+}
+
+.border {
+  border: 1px solid var(--border);
+}
+
+.borderPrimary {
+  border-color: var(--primary);
+}
+
+.shadowLg {
+  box-shadow: $shadow-lg;
+}
+
+.ring2 {
+  box-shadow: 0 0 0 2px rgba(var(--primary), $opacity-20);
+}
+
+.ringPrimary20 {
+  box-shadow: 0 0 0 2px rgba(var(--primary), $opacity-20);
+}
+
+// Hover 状态样式
+.hoverBgPrimary90:hover {
+  background: rgba(var(--primary), $opacity-90);
+}
+
+.hoverFromOrange600ToRed600:hover {
+  background: linear-gradient(to right, #ea580c, #dc2626);
+}
+
+// 变体样式
+.variantDestructive {
+  background: var(--destructive);
+  color: var(--destructive-foreground);
+}
+
+.variantOutline {
+  border: 1px solid var(--border);
+  background: transparent;
+  
+  &:hover {
+    background: var(--accent);
+    color: var(--accent-foreground);
+  }
+}
+
+// 尺寸样式
+.sizeLg {
+  padding: $spacing-3 $spacing-8;
+  font-size: $text-lg;
+}

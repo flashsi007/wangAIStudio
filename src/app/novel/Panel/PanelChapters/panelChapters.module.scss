@@ -1,0 +1,483 @@
+
+.PanelChapters {
+    padding-top: 5rem;
+    padding-left: 0.5rem;
+    padding-right: 1.5rem;
+    width: 100%;
+    
+    /* 移动设备 (小于 768px) */
+    @media (max-width: 767px) {
+        padding-top: 3rem;
+        padding-left: 0.25rem;
+        padding-right: 0.75rem;
+    }
+    
+    /* 平板设备 (768px - 1023px) */
+    @media (min-width: 768px) and (max-width: 1023px) {
+        padding-top: 4rem;
+        padding-left: 0.375rem;
+        padding-right: 1rem;
+    }
+    
+    /* 桌面设备 (1024px 及以上) */
+    @media (min-width: 1024px) {
+        padding-top: 5rem;
+        padding-left: 0.5rem;
+        padding-right: 1.5rem;
+    }
+    
+    /* 大屏设备 (1440px 及以上) */
+    @media (min-width: 1440px) {
+        padding-top: 6rem;
+        padding-left: 0.75rem;
+        padding-right: 2rem;
+    }
+}
+
+.contentWrapper {
+    width: 100%;
+    
+    /* 移动设备布局调整 */
+    @media (max-width: 767px) {
+        padding: 0.5rem 0;
+    }
+    
+    /* 平板设备布局调整 */
+    @media (min-width: 768px) and (max-width: 1023px) {
+        padding: 0.75rem 0;
+    }
+    
+    /* 桌面设备布局调整 */
+    @media (min-width: 1024px) {
+        padding: 1rem 0;
+    }
+}
+
+/* ChapterList 响应式样式 */
+.chapterList {
+    padding: 0.5rem;
+    
+    @media (max-width: 768px) {
+      padding: 0.25rem;
+      font-size: 0.875rem;
+    }
+    
+    @media (min-width: 769px) and (max-width: 1024px) {
+      padding: 0.75rem;
+      font-size: 1rem;
+    }
+    
+    @media (min-width: 1025px) {
+      padding: 1rem;
+      font-size: 1.125rem;
+    }
+    
+    /* 移动设备 */
+    @media (max-width: 767px) {
+        .chapterItem {
+            margin-right: 0.5rem;
+            margin-bottom: 0.75rem;
+            
+            .chapterTitle {
+                font-size: 1.25rem;
+                width: 50rem;
+            }
+            
+            .chapterContent {
+                padding: 0.75rem;
+            }
+            
+            .chapterActions {
+                gap: 0.25rem;
+            }
+        }
+    }
+    
+    /* 平板设备 */
+    @media (min-width: 768px) and (max-width: 1023px) {
+        .chapterItem {
+            margin-right: 1rem;
+            margin-bottom: 1rem;
+            
+            .chapterTitle {
+                font-size: 1.5rem;
+                width: 14rem;
+            }
+            
+            .chapterContent {
+                padding: 1rem;
+            }
+        }
+    }
+    
+    /* 桌面设备 */
+    @media (min-width: 1024px) {
+        .chapterItem {
+            margin-right: 1.5rem;
+            margin-bottom: 1rem;
+            
+            .chapterTitle {
+                font-size: 2rem;
+                width: 16rem;
+            }
+            
+            .chapterContent {
+                padding: 1rem;
+            }
+        }
+    }
+}
+
+.chapterItem {
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    
+    @media (max-width: 768px) {
+      margin-bottom: 0.5rem;
+      padding: 0.5rem;
+    }
+    
+    @media (min-width: 769px) and (max-width: 1024px) {
+      margin-bottom: 0.75rem;
+      padding: 0.625rem;
+    }
+    
+    @media (min-width: 1025px) {
+      margin-bottom: 1rem;
+      padding: 0.875rem;
+    }
+}
+
+.chapterTitle {
+    width: 16rem;
+    font-size: 1.5rem;
+    
+    @media (max-width: 768px) {
+      width: 12rem;
+      font-size: 1.125rem;
+    }
+    
+    @media (min-width: 769px) and (max-width: 1024px) {
+      width: 14rem;
+      font-size: 1.25rem;
+    }
+    
+    @media (min-width: 1025px) {
+      width: 18rem;
+      font-size: 1.75rem;
+    }
+}
+
+.chapterActions {
+    @media (max-width: 768px) {
+      padding: 0.25rem;
+    }
+    
+    @media (min-width: 769px) and (max-width: 1024px) {
+      padding: 0.375rem;
+    }
+}
+
+/* ExtractList 响应式样式 */
+.extractList {
+    /* 移动设备 */
+    @media (max-width: 767px) {
+        .extractItem {
+            margin-right: 0.5rem;
+            margin-bottom: 0.75rem;
+            
+            .extractTitle {
+                font-size: 1rem;
+            }
+            
+            .extractContent {
+                padding: 0.75rem;
+                font-size: 0.875rem;
+            }
+        }
+    }
+    
+    /* 平板设备 */
+    @media (min-width: 768px) and (max-width: 1023px) {
+        .extractItem {
+            margin-right: 1rem;
+            margin-bottom: 1rem;
+            
+            .extractTitle {
+                font-size: 1.125rem;
+            }
+            
+            .extractContent {
+                padding: 1rem;
+            }
+        }
+    }
+    
+    /* 桌面设备 */
+    @media (min-width: 1024px) {
+        .extractItem {
+            margin-right: 1.5rem;
+            margin-bottom: 1rem;
+            
+            .extractTitle {
+                font-size: 1.125rem;
+            }
+            
+            .extractContent {
+                padding: 1rem;
+            }
+        }
+    }
+}
+
+.extractItem {
+    margin-bottom: 1rem;
+    margin-right: 1.5rem;
+    
+    @media (max-width: 768px) {
+      margin-bottom: 0.5rem;
+      margin-right: 0.75rem;
+    }
+    
+    @media (min-width: 769px) and (max-width: 1024px) {
+      margin-bottom: 0.75rem;
+      margin-right: 1rem;
+    }
+    
+    @media (min-width: 1025px) {
+      margin-bottom: 1.25rem;
+      margin-right: 1.75rem;
+    }
+}
+
+.extractContent {
+    padding: 1rem;
+    
+    @media (max-width: 768px) {
+      padding: 0.5rem;
+    }
+    
+    @media (min-width: 769px) and (max-width: 1024px) {
+      padding: 0.75rem;
+    }
+    
+    @media (min-width: 1025px) {
+      padding: 1.25rem;
+    }
+}
+
+.extractTitle {
+    font-size: 1.125rem;
+    
+    @media (max-width: 768px) {
+      font-size: 1rem;
+    }
+    
+    @media (min-width: 769px) and (max-width: 1024px) {
+      font-size: 1.0625rem;
+    }
+    
+    @media (min-width: 1025px) {
+      font-size: 1.25rem;
+    }
+}
+
+/* OutlineForm 响应式样式 */
+.outlineForm {
+    /* 移动设备 */
+    @media (max-width: 767px) {
+        .searchContainer {
+            padding: 0 0.5rem;
+            
+            .searchInput {
+                max-width: 100%;
+            }
+        }
+        
+        .buttonGroup {
+            flex-direction: column;
+            gap: 0.5rem;
+            align-items: stretch;
+            
+            button {
+                width: 100%;
+            }
+        }
+        
+        .formContainer {
+            padding: 0.75rem;
+            
+            .formInput {
+                max-width: 100%;
+            }
+        }
+    }
+    
+    /* 平板设备 */
+    @media (min-width: 768px) and (max-width: 1023px) {
+        .searchContainer {
+            padding: 0 1rem;
+        }
+        
+        .buttonGroup {
+            gap: 0.75rem;
+        }
+        
+        .formContainer {
+            padding: 1rem;
+        }
+    }
+    
+    /* 桌面设备 */
+    @media (min-width: 1024px) {
+        .searchContainer {
+            padding: 0 1.8rem;
+        }
+        
+        .buttonGroup {
+            gap: 0.75rem;
+        }
+        
+        .formContainer {
+            padding: 1rem;
+        }
+    }
+}
+
+.searchContainer {
+    margin-bottom: 1rem;
+    padding: 0 1.8rem;
+    
+    @media (max-width: 768px) {
+      margin-bottom: 0.5rem;
+      padding: 0 1rem;
+    }
+    
+    @media (min-width: 769px) and (max-width: 1024px) {
+      margin-bottom: 0.75rem;
+      padding: 0 1.4rem;
+    }
+    
+    @media (min-width: 1025px) {
+      margin-bottom: 1.25rem;
+      padding: 0 2rem;
+    }
+}
+
+.searchInput {
+    @media (max-width: 768px) {
+      font-size: 0.875rem;
+    }
+    
+    @media (min-width: 769px) and (max-width: 1024px) {
+      font-size: 0.9375rem;
+    }
+    
+    @media (min-width: 1025px) {
+      font-size: 1rem;
+    }
+}
+
+.buttonGroup {
+    margin-bottom: 1rem;
+    
+    @media (max-width: 768px) {
+      margin-bottom: 0.5rem;
+      flex-direction: column;
+      space-x: 0;
+      gap: 0.5rem;
+    }
+    
+    @media (min-width: 769px) and (max-width: 1024px) {
+      margin-bottom: 0.75rem;
+    }
+    
+    @media (min-width: 1025px) {
+      margin-bottom: 1.25rem;
+    }
+}
+
+.formContainer {
+    margin-bottom: 1rem;
+    
+    @media (max-width: 768px) {
+      margin-bottom: 0.5rem;
+    }
+    
+    @media (min-width: 769px) and (max-width: 1024px) {
+      margin-bottom: 0.75rem;
+    }
+    
+    @media (min-width: 1025px) {
+      margin-bottom: 1.25rem;
+    }
+}
+
+.formContent {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    
+    @media (max-width: 768px) {
+      margin-bottom: 0.5rem;
+      padding: 0.5rem;
+    }
+    
+    @media (min-width: 769px) and (max-width: 1024px) {
+      margin-bottom: 0.75rem;
+      padding: 0.75rem;
+    }
+    
+    @media (min-width: 1025px) {
+      margin-bottom: 1.25rem;
+      padding: 1.25rem;
+    }
+}
+
+.formInput {
+    @media (max-width: 768px) {
+      font-size: 0.875rem;
+    }
+    
+    @media (min-width: 769px) and (max-width: 1024px) {
+      font-size: 0.9375rem;
+    }
+    
+    @media (min-width: 1025px) {
+      font-size: 1rem;
+    }
+}
+
+.formTextarea {
+    @media (max-width: 768px) {
+      font-size: 0.875rem;
+      min-height: 4rem;
+    }
+    
+    @media (min-width: 769px) and (max-width: 1024px) {
+      font-size: 0.9375rem;
+      min-height: 5rem;
+    }
+    
+    @media (min-width: 1025px) {
+      font-size: 1rem;
+      min-height: 6rem;
+    }
+}
+
+.formActions {
+    padding-left: 0.75rem;
+    
+    @media (max-width: 768px) {
+      padding-left: 0.5rem;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    @media (min-width: 769px) and (max-width: 1024px) {
+      padding-left: 0.625rem;
+    }
+    
+    @media (min-width: 1025px) {
+      padding-left: 1rem;
+    }
+}

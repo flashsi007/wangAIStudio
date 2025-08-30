@@ -1,0 +1,550 @@
+// 引用 atomic.scss 中的变量
+@import './atomic.scss';
+
+// 主页面容器
+.page {
+  display: flex;
+  min-height: 100svh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--muted);
+  padding: $spacing-6;
+  
+  @media (min-width: 768px) {
+    padding: $spacing-10;
+  }
+}
+
+// 内容容器
+.container {
+  width: 100%;
+  max-width: 24rem;
+  
+  @media (min-width: 768px) {
+    max-width: 48rem;
+  }
+}
+
+// 登录表单容器
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-6;
+}
+
+// 卡片样式
+.card {
+  overflow: hidden;
+}
+
+.cardContent {
+  display: grid;
+  padding: 0;
+  
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+// 表单区域
+.formSection {
+  padding-left: $spacing-2;
+  padding-right: $spacing-2;
+}
+
+// 标签页样式
+.tabsList {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+// 表单样式
+.form {
+  padding: $spacing-6;
+  
+  @media (min-width: 768px) {
+    padding: $spacing-8;
+  }
+}
+
+// 表单内容容器
+.formContent {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-6;
+}
+
+// 头部区域
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.title {
+  font-size: $text-2xl;
+  font-weight: $font-bold;
+}
+
+.subtitle {
+  text-balance: balance;
+  color: var(--muted-foreground);
+}
+
+// 输入组样式
+.inputGroup {
+  display: grid;
+  gap: $spacing-2;
+}
+
+.inputGroupMt {
+  display: grid;
+  gap: $spacing-2;
+  margin-top: $spacing-4; 
+}
+
+// 标签行样式
+.labelRow {
+  display: flex;
+  align-items: center;
+}
+
+.forgotPassword {
+  margin-left: auto;
+  font-size: $text-sm;
+  text-decoration-line: underline;
+  text-underline-offset: 2px;
+  
+  &:hover {
+    text-decoration-line: underline;
+  }
+}
+
+// 验证码容器
+.captchaContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: $spacing-2;
+}
+
+.captchaImageContainer {
+  border-radius: $radius-lg;
+  transition: colors 150ms ease;
+}
+
+.captchaImage {
+  cursor: pointer;
+}
+
+// 按钮样式
+.submitButton {
+  width: 100%;
+  border-radius: 0.8rem;
+}
+
+.submitButtonAlt {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.emailButton {
+  border-radius: 0.8rem;
+}
+
+.emailButtonAlt {
+  border-radius: 0.5rem;
+}
+
+// 验证码按钮容器
+.emailCaptchaContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: $spacing-2;
+  margin-top: $spacing-6;
+  margin-bottom: $spacing-6;
+}
+
+// 文本样式
+.centerText {
+  text-align: center;
+  font-size: $text-sm;
+  margin-top: $spacing-4;
+}
+
+.centerTextMt {
+  text-align: center;
+  font-size: $text-sm;
+  margin-top: $spacing-4;
+}
+
+.linkText {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// 分隔线样式
+.divider {
+  position: relative;
+  text-align: center;
+  font-size: $text-sm;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    top: 50%;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid var(--border);
+  }
+}
+
+.dividerText {
+  position: relative;
+  z-index: 10;
+  background: var(--background);
+  padding: 0 $spacing-2;
+  color: var(--muted-foreground);
+}
+
+.inputGroupMt {
+  display: grid;
+  gap: $spacing-2;
+  margin-top: $spacing-4;
+}
+
+.captchaContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: $spacing-2;
+}
+
+.captchaImageContainer {
+  border-radius: $radius-lg;
+  transition: colors 0.2s;
+}
+
+.captchaImage {
+  cursor: pointer;
+}
+
+.submitButtonMt {
+  width: 100%;
+  margin-top: $spacing-4;
+  border-radius: $radius-2xl;
+}
+
+.socialButton {
+  width: 100%;
+}
+
+.pageContainer {
+  display: flex;
+  min-height: 100svh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--muted);
+  padding: $spacing-6;
+  
+  @media (min-width: 768px) {
+    padding: $spacing-10;
+  }
+}
+
+.pageContent {
+  width: 100%;
+  max-width: 24rem;
+  
+  @media (min-width: 768px) {
+    max-width: 48rem;
+  }
+}
+
+// 背景图片区域
+.imageSection {
+  position: relative;
+  display: none;
+  background: var(--muted);
+  
+  @media (min-width: 768px) {
+    display: block;
+  }
+}
+
+.backgroundImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+// 底部条款
+.terms {
+  text-balance: balance;
+  text-align: center;
+  font-size: $text-xs;
+  color: var(--muted-foreground);
+  
+  a {
+    text-decoration-line: underline;
+    text-underline-offset: 4px;
+    
+    &:hover {
+      color: var(--primary);
+    }
+  }
+}
+
+// 工具类样式
+.flexCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.flexRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.itemsCenter {
+  align-items: center;
+}
+
+.justifyCenter {
+  justify-content: center;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.wFull {
+  width: 100%;
+}
+
+.gap2 {
+  gap: $spacing-2;
+}
+
+.gap6 {
+  gap: $spacing-6;
+}
+
+.mt4 {
+  margin-top: $spacing-4;
+}
+
+.mt6 {
+  margin-top: $spacing-6;
+}
+
+.mb6 {
+  margin-bottom: $spacing-6;
+}
+
+.p6 {
+  padding: $spacing-6;
+}
+
+.p8 {
+  padding: $spacing-8;
+}
+
+.px2 {
+  padding-left: $spacing-2;
+  padding-right: $spacing-2;
+}
+
+.roundedLg {
+  border-radius: $radius-lg;
+}
+
+.textSm {
+  font-size: $text-sm;
+}
+
+.text2xl {
+  font-size: $text-2xl;
+}
+
+.textXs {
+  font-size: $text-xs;
+}
+
+.fontBold {
+  font-weight: $font-bold;
+}
+
+.hidden {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.grid {
+  display: grid;
+}
+
+.gridCols2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.cursorPointer {
+  cursor: pointer;
+}
+
+.transitionColors {
+  transition: colors 150ms ease;
+}
+
+.underline {
+  text-decoration-line: underline;
+}
+
+.underlineOffset2 {
+  text-underline-offset: 2px;
+}
+
+.underlineOffset4 {
+  text-underline-offset: 4px;
+}
+
+.mlAuto {
+  margin-left: auto;
+}
+
+.spaceX2 > * + * {
+  margin-left: $spacing-2;
+}
+
+.overflow {
+  overflow: hidden;
+}
+
+.bgMuted {
+  background: var(--muted);
+}
+
+.bgBackground {
+  background: var(--background);
+}
+
+.textMutedForeground {
+  color: var(--muted-foreground);
+}
+
+.textPrimary {
+  color: var(--primary);
+}
+
+.borderBorder {
+  border-color: var(--border);
+}
+
+.borderT {
+  border-top: 1px solid;
+}
+
+.zIndex0 {
+  z-index: 0;
+}
+
+.zIndex10 {
+  z-index: 10;
+}
+
+.inset0 {
+  inset: 0;
+}
+
+.top50 {
+  top: 50%;
+}
+
+.top0 {
+  top: 0;
+}
+
+.left0 {
+  left: 0;
+}
+
+.objectCover {
+  object-fit: cover;
+}
+
+.maxWSm {
+  max-width: 24rem;
+}
+
+.maxW3xl {
+  max-width: 48rem;
+}
+
+.minHSvh {
+  min-height: 100svh;
+}
+
+.h100 {
+  height: 100%;
+}
+
+.w100 {
+  width: 100%;
+}
+
+// 响应式样式
+@media (min-width: 768px) {
+  .mdBlock {
+    display: block;
+  }
+  
+  .mdGridCols2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .mdP8 {
+    padding: $spacing-8;
+  }
+  
+  .mdP10 {
+    padding: $spacing-10;
+  }
+  
+  .mdMaxW3xl {
+    max-width: 48rem;
+  }
+}
+
+// Hover 状态
+.hoverUnderline:hover {
+  text-decoration-line: underline;
+}
+
+.hoverTextPrimary:hover {
+  color: var(--primary);
+}

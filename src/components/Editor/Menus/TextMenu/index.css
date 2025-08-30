@@ -1,0 +1,5 @@
+.toolbarBox {
+    background-color: var(--main-color);
+    color: var(--icon-color);
+    margin-bottom: 0.5rem;
+}

@@ -1,0 +1,11 @@
+.trigger-li,
+.triggerBtn {
+    background-color: var(--color-bg-5);
+    color: var(--color-text-1);
+}
+
+.trigger-li:hover {
+    background-color: var(--color-bg-4);
+    color: var(--color-text-4);
+
+}

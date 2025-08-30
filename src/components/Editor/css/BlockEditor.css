@@ -1,0 +1,208 @@
+.ProseMirror {
+
+    border: none;
+    /* 去掉你之前可能给它的边框 */
+    outline: none;
+    /* 去掉浏览器默认聚焦线 */
+    box-sizing: border-box;
+
+    width: 100%;
+    max-width: 100%;
+    /* 移除固定 min-width，防止小屏溢出 */
+    /* min-width: 40rem; */
+    /* max-width: 50rem; */
+
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5rem;
+    /* background-color: #f5f1e8; */
+    border-radius: 1rem;
+
+    /* 外层阴影 */
+    /* box-shadow:  0 2px 4px rgba(0, 0, 0, 0.03),  0 8px 24px rgba(0, 0, 0, 0.06),   inset 0 0 0 1px rgba(255, 255, 255, 0.4); */
+
+    font-family: Georgia, serif;
+
+    color: var(--text-color);
+    line-height: 1.625;
+    backdrop-filter: blur(1px);
+   
+
+}
+
+/* 中文作文专业排版样式 */
+.ProseMirror p {
+    /* 字体设置 */
+    font-family: 'SimSun', '宋体', 'FangSong', '仿宋', serif;
+    /* 印刷体首选宋体/仿宋 */
+    font-size: 1.3rem;
+
+    /* 行距与段落 */
+    line-height: 1.8;
+    /* 1.8倍行距，阅读舒适 */
+    text-indent: 2em;
+    /* 首行缩进2字符 */
+    margin: 0 0 1em 0;
+    /* 段前0行距，段后1行距 */
+
+    /* 文字排版 */
+    color: #333;
+    /* 深灰墨色，降低对比度 */
+    letter-spacing: 0.05em;
+    /* 字距微开，中文更舒展 */
+    text-align: justify;
+    /* 两端对齐 */
+    text-justify: inter-ideograph;
+    /* 优化中文两端对齐 */
+
+    /* 优化渲染 */
+    -webkit-font-smoothing: antialiased;
+    /* 抗锯齿渲染 */
+    text-rendering: optimizeLegibility;
+    /* 优化文本可读性 */
+
+    /* 标点处理 */
+    hanging-punctuation: allow-end;
+    /* 允许标点悬挂 */
+    line-break: strict;
+    /* 严格换行规则 */
+    word-break: break-all;
+    /* 允许在字内换行 */
+}
+
+/* .ProseMirror p { 
+    font-size: 1.2rem; 
+    line-height: 1.1; 
+    color: var(--text-color); 
+    letter-spacing: 0.2rem;  
+    text-indent: 0.05rem; 
+    margin: 0 0 1em 0; 
+    text-align: justify;
+    text-justify: inter-ideograph; 
+    -webkit-font-smoothing: antialiased;
+} */
+
+.is-empty::before {
+    color: #a59b9b;
+    content: '"/"唤起更多菜单';
+    float: left;
+    height: 0;
+    pointer-events: none;
+}
+
+.ProseMirror p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0.6rem 1rem;
+    /* border-bottom: 1px solid #e5e5e5; */
+}
+
+.ProseMirror h1 {
+    /* 不换行 & 截断 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* 90 字宽度 ≈ 视字体而定，可留一点余量 */
+    /* max-width: 40ch; */
+    /* 约 40 个字符宽，90 字以内不会溢出 */
+    display: block; 
+    font-size: 2.5rem;
+    /* 移动端更小，随断点递增 */
+    font-weight: bold;
+    color: var(--text-color);
+    /* background: #f7f3e9; */
+    border-radius: 0.5rem;
+    text-align: left;
+    margin: 1rem 0 1rem 0;
+    font-family: 'SimHei', '黑体', sans-serif;
+ 
+    
+}
+
+.ProseMirror h2 {
+    /* 不换行 & 截断 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* 90 字宽度 ≈ 视字体而定，可留一点余量 */
+    /* max-width: 40ch; */
+    /* 约 40 个字符宽，90 字以内不会溢出 */
+    display: block;
+    font-size: 2rem;
+    /* 移动端更小，随断点递增 */
+    font-weight: bold;
+    color: var(--text-color);
+    /* background: #f7f3e9; */
+    border-radius: 0.5rem;
+    margin: 1.5em 0 1em 0;
+    font-family: 'SimHei', '黑体', sans-serif;
+}
+
+
+
+
+.ProseMirror h3 {
+    /* 不换行 & 截断 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* 90 字宽度 ≈ 视字体而定，可留一点余量 */
+    /* max-width: 40ch; */
+    /* 约 40 个字符宽，90 字以内不会溢出 */
+    display: block;
+    font-size: 1.75rem;
+    /* 移动端更小，随断点递增 */
+    font-weight: bold;
+    color: var(--text-color);
+    /* background: #f7f3e9; */
+    border-radius: 0.5rem;
+}
+
+
+.ProseMirror hr {
+
+    border: .12rem solid rgb(25, 26, 26);
+}
+
+/* 响应式断点（与 Tailwind 保持一致） */
+/* @media (min-width: 640px) {
+
+    .ProseMirror {
+        max-width: 36rem;
+        height: 75vh;
+        padding: 1.25rem;
+    }
+
+    .ProseMirror h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .ProseMirror {
+        max-width: 42rem;
+        height: 80vh;
+        padding: 1.5rem;
+    }
+
+    .ProseMirror h1 {
+        font-size: 2.25rem;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .ProseMirror {
+        max-width: 45rem;
+    }
+
+    .ProseMirror h1 {
+        font-size: 2.75rem;
+    }
+} */

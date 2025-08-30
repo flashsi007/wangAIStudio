@@ -1,0 +1,9 @@
+.fragmentext {
+    background-color: var(--main-color);
+    color: var(--button-active-text-color);
+}
+
+.active {
+    background-color: var(--button-active-color);
+    color: var(--button-active-text-color);
+}

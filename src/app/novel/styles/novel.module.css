@@ -1,0 +1,27 @@
+ 
+.IconBox {
+  width: 18px;
+  height: 60px;
+  background: hsl(0 0% 100%);
+  border: 1px solid hsl(214.3 31.8% 91.4%);
+  /* border-radius: 0 8px 8px 0; */
+   border-bottom-left-radius: 8px;
+   border-top-left-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.IconBox:hover {
+  background: hsl(210 40% 98%);
+  border-color: hsl(214.3 31.8% 85%);
+}
+
+.IconBox svg {
+  color: hsl(222.2 84% 4.9%);
+  width: 16px;
+  height: 16px;
+}
+

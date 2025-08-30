@@ -1,0 +1,8 @@
+.rightSidebar{
+  position: absolute;
+  top: 0;
+  right: 0; 
+  height: 100vh;         /* 全屏高度 */ 
+  overflow-y: auto;      /* 内容超出时滚动 */
+  z-index: 300;          
+}
