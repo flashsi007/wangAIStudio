@@ -1,0 +1,12 @@
+# docker-compose.yml
+version: "3.9"
+services:
+  wangai-studio-server:
+    build: .
+    container_name: wangai-studio-server
+    image: wangai-studio-server:latest
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env.production
+    restart: unless-stopped
